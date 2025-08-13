@@ -1,6 +1,6 @@
 import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
 import axios from "https://cdn.jsdelivr.net/npm/axios@1.9.0/+esm";
-const SERVER_IP = window.location.origin;
+import { SERVER_IP } from "./constants.js";
 /**
  * Generates a UUID (Universally Unique Identifier) using the browser's crypto API.
  *
