@@ -1,3 +1,4 @@
+export const SERVER_IP = window.location.origin;
 export const ALPINE_COMPONENT = "alpine-component";
 export const COMPONENT_ID = "component-id";
 export const COMPONENT_NAME = "component-name";
