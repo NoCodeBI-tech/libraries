@@ -1,5 +1,5 @@
-import { NAME } from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/constants.js";
-import { appMethod } from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/common.methods.js";
+import { NAME } from "https://cdn.jsdelivr.net/gh/NoCodeBI-tech/libraries@main/js/view/constants.js";
+import { appMethod } from "https://cdn.jsdelivr.net/gh/NoCodeBI-tech/libraries@main/js/view/common.methods.js";
 
 const getElement = (component) => {
     const document = window.editor ? window.editor.Canvas?.getDocument() : window.document;

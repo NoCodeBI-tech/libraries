@@ -1,6 +1,6 @@
+import { SERVER_IP } from "https://cdn.jsdelivr.net/gh/NoCodeBI-tech/libraries@main/js/view/constants.js";
 import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
 import axios from "https://cdn.jsdelivr.net/npm/axios@1.9.0/+esm";
-import { SERVER_IP } from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/constants.js";
 /**
  * Generates a UUID (Universally Unique Identifier) using the browser's crypto API.
  *

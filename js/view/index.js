@@ -1,5 +1,5 @@
-import { appMethod } from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/common.methods.js";
-import { generateUUID, initializeLottieAnimation, makeRequest } from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/helpers.js";
+import { appMethod } from "https://cdn.jsdelivr.net/gh/NoCodeBI-tech/libraries@main/js/view/common.methods.js";
+import { generateUUID, initializeLottieAnimation, makeRequest } from "https://cdn.jsdelivr.net/gh/NoCodeBI-tech/libraries@main/js/view/helpers.js";
 const { createApp, nextTick } = Vue;
 
 import {
@@ -12,7 +12,7 @@ import {
     FORM_ITEM,
     LIST_VIEW_ITEM,
     NAME,
-} from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/constants.js";
+} from "https://cdn.jsdelivr.net/gh/NoCodeBI-tech/libraries@main/js/view/constants.js";
 
 const formInputComponents = ["input", "select", "textarea", "checkbox", "radio", "range", "date", "dateRange", "dateTime", "time", "tags", "switch", "keyValueTable"];
 

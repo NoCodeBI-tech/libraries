@@ -1,5 +1,5 @@
-import actionFunctions from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/component.actions.js";
-import { NAME } from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/constants.js";
+import actionFunctions from "https://cdn.jsdelivr.net/gh/NoCodeBI-tech/libraries@main/js/view/component.actions.js";
+import { NAME } from "https://cdn.jsdelivr.net/gh/NoCodeBI-tech/libraries@main/js/view/constants.js";
 
 export const appMethod = {
     // evalExpression: function (value, item = {}) {
