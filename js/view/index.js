@@ -1,16 +1,8 @@
-import { generateUUID, initializeLottieAnimation, makeRequest } from "./helpers.js";
 import { appMethod } from "./common.methods.js";
+import { generateUUID, initializeLottieAnimation, makeRequest } from "./helpers.js";
 const { createApp, nextTick } = Vue;
 
-const NAME = "data-name";
-const COMPONENT_NAME = "data-component-name";
-const COMPONENT_ID = "data-component-id";
-const COMPONENT_TYPE = "data-component-type";
-const COMPOSITE_COMPONENT = "data-composite-component";
-const COMPOSITE_CHILD = "data-composite-child";
-const LIST_VIEW_ITEM = "data-list-view-item";
-const FORM_ITEM = "data-form-item";
-const ALPINE_COMPONENT = "data-alpine-component";
+import { ALPINE_COMPONENT, COMPONENT_ID, COMPONENT_NAME, COMPONENT_TYPE, COMPOSITE_CHILD, COMPOSITE_COMPONENT, FORM_ITEM, LIST_VIEW_ITEM, NAME } from "./constants.js";
 
 const formInputComponents = ["input", "select", "textarea", "checkbox", "radio", "range", "date", "dateRange", "dateTime", "time", "tags", "switch", "keyValueTable"];
 
@@ -25,12 +17,6 @@ window.source = Vue.reactive({});
 window.qParams = Vue.reactive({});
 let pageQueries = [];
 const isLoading = {};
-
-const Utils = {};
-const QueryManager = {};
-const RenderManager = {};
-const MountManager = {};
-const AlertManager = {};
 
 // Utils
 const getAttributes = (component) => {
