@@ -1,0 +1,89 @@
+/* Base styles for the tooltip */
+.tooltip {
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  background-color: #2d3748; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Tooltip arrow styles */
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Tooltip when visible */
+.tooltip.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Positioning for the tooltip */
+[data-tooltip-placement="right"] .tooltip {
+  left: 100%;
+  top: 50%;
+  transform: translateX(8px) translateY(-50%);
+}
+
+[data-tooltip-placement="right"] .tooltip-arrow {
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px 6px 6px 0;
+  border-color: transparent #2d3748 transparent transparent;
+}
+
+/* Positioning for the tooltip on the left */
+[data-tooltip-placement="left"] .tooltip {
+  right: 100%;
+  top: 50%;
+  transform: translateX(-8px) translateY(-50%);
+}
+
+[data-tooltip-placement="left"] .tooltip-arrow {
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent #2d3748;
+}
+
+/* Positioning for the tooltip on the top */
+[data-tooltip-placement="top"] .tooltip {
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+[data-tooltip-placement="top"] .tooltip-arrow {
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-color: #2d3748 transparent transparent transparent;
+}
+
+/* Positioning for the tooltip on the bottom */
+[data-tooltip-placement="bottom"] .tooltip {
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%) translateY(8px);
+}
+
+[data-tooltip-placement="bottom"] .tooltip-arrow {
+  left: 50%;
+  top: -6px;
+  transform: translateX(-50%);
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent #2d3748 transparent;
+}

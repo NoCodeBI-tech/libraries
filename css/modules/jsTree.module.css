@@ -1,0 +1,43 @@
+.vakata-context,
+.vakata-context ul {
+    border-radius: 10px;
+    border-color: #e2e8f0;
+    background: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    width: 12rem;
+}
+.jstree-default .jstree-icon:empty {
+    font-size: larger;
+}
+.jstree-wholerow.jstree-wholerow-clicked {
+    background: fixed;
+    background-color: #0f172a;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.jstree-default > .jstree-wholerow-ul .jstree-clicked {
+    color: white;
+}
+.jstree-default .jstree-wholerow {
+    border-radius: 5px;
+    height: 2rem;
+}
+.jstree-anchor {
+    vertical-align: middle;
+}
+.jstree-default > .jstree-no-dots .jstree-closed > .jstree-ocl {
+    background-position: -4px 0px;
+}
+.jstree-default > .jstree-no-dots .jstree-open > .jstree-ocl {
+    background-position: -35px 2px;
+}
+.jstree-default .jstree-node {
+    min-height: 2rem;
+    line-height: 2rem;
+    margin-left: 24px;
+    min-width: 24px;
+}
+.jstree-node input {
+    color: black !important;
+}

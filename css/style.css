@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("colors.css");
+/* @import url("uiBuilder/main/css/hugeIcons.css"); */
+
+html,
+body {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Open Sans", sans-serif;
+}
+
+hr {
+    border-color: #e2e8f0;
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ace code editor  */
+.ace-xcode .ace_gutter,
+.ace-xcode .ace_marker-layer .ace_active-line {
+    background: #f1f5f9;
+}
+.ace-xcode .ace_gutter-active-line {
+    background: #e2e8f0;
+}
+
+.scrollbar_visible {
+    /* Custom scrollbar styles */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        background: #e2e8f0;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #0f172a;
+        border-radius: 6px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #0f172a;
+    }
+    ::-webkit-scrollbar-corner {
+        background: #e2e8f0;
+    }
+
+    /* Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #0f172a #e2e8f0;
+    }
+}

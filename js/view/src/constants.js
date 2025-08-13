@@ -1,0 +1,10 @@
+export const ALPINE_COMPONENT = "alpine-component";
+export const COMPONENT_ID = "component-id";
+export const COMPONENT_NAME = "component-name";
+export const COMPONENT_TYPE = "component-type";
+export const COMPOSITE_CHILD = "composite-child";
+export const COMPOSITE_COMPONENT = "composite-component";
+export const FORM_ITEM = "form-item";
+export const LIST_VIEW_ITEM = "list-view-item";
+export const NAME = "name";
+export const FORM_INPUT_COMPONENTS = ["input", "select", "textarea"];
