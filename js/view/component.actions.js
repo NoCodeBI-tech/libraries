@@ -1,5 +1,5 @@
-import { appMethod } from "./common.methods.js";
-import componentControlMethods from "./componentControlMethods.js";
+import { appMethod } from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/common.methods.js";
+import componentControlMethods from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/componentControlMethods.js";
 
 export default {
     // Action Function Declared Here

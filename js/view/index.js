@@ -1,8 +1,18 @@
-import { appMethod } from "./common.methods.js";
-import { generateUUID, initializeLottieAnimation, makeRequest } from "./helpers.js";
+import { appMethod } from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/common.methods.js";
+import { generateUUID, initializeLottieAnimation, makeRequest } from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/helpers.js";
 const { createApp, nextTick } = Vue;
 
-import { ALPINE_COMPONENT, COMPONENT_ID, COMPONENT_NAME, COMPONENT_TYPE, COMPOSITE_CHILD, COMPOSITE_COMPONENT, FORM_ITEM, LIST_VIEW_ITEM, NAME } from "./constants.js";
+import {
+    ALPINE_COMPONENT,
+    COMPONENT_ID,
+    COMPONENT_NAME,
+    COMPONENT_TYPE,
+    COMPOSITE_CHILD,
+    COMPOSITE_COMPONENT,
+    FORM_ITEM,
+    LIST_VIEW_ITEM,
+    NAME,
+} from "https://github.com/NoCodeBI-tech/libraries/blob/main/js/view/constants.js";
 
 const formInputComponents = ["input", "select", "textarea", "checkbox", "radio", "range", "date", "dateRange", "dateTime", "time", "tags", "switch", "keyValueTable"];
 
