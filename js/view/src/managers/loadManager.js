@@ -58,7 +58,4 @@ const handlePageLoad = async () => {
     }
 };
 
-export default {
-    handlePageLoad,
-    onBodyLoad,
-}
+export { handlePageLoad, onBodyLoad };
