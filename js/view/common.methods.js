@@ -1,5 +1,5 @@
-import { NAME } from "./constants.js";
 import actionFunctions from "./component.actions.js";
+import { NAME } from "./constants.js";
 
 export const appMethod = {
     // evalExpression: function (value, item = {}) {
