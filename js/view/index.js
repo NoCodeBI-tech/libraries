@@ -254,7 +254,6 @@ const renderListView = async (listViewComponent) => {
     const innerChildren = listViewFirstChild.querySelectorAll(`[${NAME}]`);
     const componentDataCache = {};
     const blocksCache = {};
-    const styleCache = {};
     window.component[listViewName].components = {};
     Array.from(innerChildren).forEach((component) => {
         const { [NAME]: dataName, [COMPONENT_ID]: compId, [COMPONENT_NAME]: compName } = getAttributes(component);
@@ -317,6 +316,11 @@ const mountNewVueApp = async (name, dataRef, component, block = null, parsedUiCo
     const { data, watch = {}, ...rest } = await eval(`(${block.js})`);
     const dataObject = typeof data === "function" ? data() : data;
 
+    await Promise.all([
+        ...block?.resources?.scripts.map((src) => injectScript({ src, isInline: false, document })),
+        ...block?.resources?.styles.map((style) => injectStyle({ href: style, isInline: false, document })),
+    ]);
+
     dataRef[name] = isCompositeChild
         ? _.cloneDeep(parentBlock.components[getAttributes(component)[COMPOSITE_CHILD]])
         : {
@@ -337,6 +341,7 @@ const mountNewVueApp = async (name, dataRef, component, block = null, parsedUiCo
                   columnList: dataRef[name]?.columnList || [],
               }),
           };
+
     const compApp = createApp({
         data: () => dataRef[name],
         watch: {
@@ -368,8 +373,10 @@ const mountExistingVueApp = async (component, dataRef) => {
     const block = window.pageResource.blocks.find((b) => b.id === attributes[COMPONENT_ID]);
     if (!block || !block.js) return;
     // Inject resources
-    for (const script of block?.resources?.scripts || []) await injectScript({ src: script, isInline: false, document });
-    for (const style of block?.resources?.styles || []) await injectStyle({ href: style, isInline: false, document });
+    await Promise.all([
+        ...block?.resources?.scripts.map((src) => injectScript({ src, isInline: false, document })),
+        ...block?.resources?.styles.map((style) => injectStyle({ href: style, isInline: false, document })),
+    ]);
 
     const { data = {}, watch = {}, ...rest } = await eval(`(${block.js})`);
     const compApp = createApp({
