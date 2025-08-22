@@ -294,9 +294,9 @@ const renderListView = async (listViewComponent) => {
                     const block = blocksCache[compName];
                     await mountNewVueApp(name, dataRef, comp, block);
                     if (!dataRef[name]) return;
-                    const valueConfig = componentDataCache[dataName]?.valueConfig;
-                    if (valueConfig) {
-                        const evaluated = appMethod.evalExpression(valueConfig, item);
+                    const componentData = componentDataCache[dataName];
+                    if (componentData) {
+                        const evaluated = appMethod.evalExpression(componentData, item);
                         Object.assign(dataRef[name], evaluated);
                     }
                 })
@@ -330,15 +330,24 @@ const mountNewVueApp = async (name, dataRef, component, block = null, parsedUiCo
               events: {},
               event: {},
               eventHandlers: {},
-
+              ...(componentType === "form" && {
+                  data: dataRef[name]?.data || {},
+                  components: dataRef[name]?.components || {},
+              }),
               ...(componentType === "chart" && {
                   series: dataRef[name]?.series || [],
                   seriesList: dataRef[name]?.seriesList || [],
+                  seriesSettings: dataRef[name]?.seriesSetting || {},
+                  axisConfiguration: {
+                      xAxis: "", // id
+                      yAxis: [], // aggregation ids
+                      filterType: "",
+                  },
+                  xAxis: dataRef[name]?.xAxis || [],
+                  yAxis: dataRef[name]?.yAxis || [],
               }),
-
               ...(componentType === "table" && {
-                  column: dataRef[name]?.column || [],
-                  columnList: dataRef[name]?.columnList || [],
+                  columns: dataRef[name]?.columns || [],
               }),
           };
 
